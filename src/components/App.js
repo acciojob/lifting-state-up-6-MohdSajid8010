@@ -13,13 +13,13 @@ const App = () => {
           <h1>Child Component</h1>
           <ul>
             <li>
-              Learn React {complete.Learn ?(""): (<button onClick={()=>setComplete({...complete,Learn:true})}>Complete</button>) }
+              Learn React {!complete.Learn && (<button onClick={()=>setComplete({...complete,Learn:true})}>Complete</button>) }
             </li>
             <li>
-            Build a React app {complete.Build ?(""): (<button onClick={()=>setComplete({...complete,Build:true})}>Complete</button>) }
+            Build a React app {!complete.Build && (<button onClick={()=>setComplete({...complete,Build:true})}>Complete</button>) }
             </li>
             <li>
-            Deploy the React app {complete.Deploye ?(""): (<button onClick={()=>setComplete({...complete,Deploye:true})}>Complete</button>) }
+            Deploy the React app {!complete.Deploye && (<button onClick={()=>setComplete({...complete,Deploye:true})}>Complete</button>) }
             </li>
           </ul>
         </div>
